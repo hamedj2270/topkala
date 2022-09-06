@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include 'layout/meta_tag.html' %}
+    {% include 'layout/admin_css.html' %}
+    {% block title %} {% endblock %}
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+{#    {% include 'layout/header.html' %}#}
+    {% block content %}{% endblock %}
+    {% include 'layout/admin_js.html' %}
+</div>
+</body>
+
+</html>

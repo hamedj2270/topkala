@@ -1,0 +1,67 @@
+{% extends 'base/_base.html' %}
+{% load static %}
+{% block site_title %}
+تماس با ما
+{% endblock %}
+
+{% block content %}
+    <div class="main-container container" id="main-container">
+        <!-- post content -->
+        <div class="blog__content mb-72">
+            <h1 class="page-title font-weight-bold">تماس با ما</h1>
+
+            <!-- Google Map -->
+            <div id="google-map" class="gmap" data-address="V Tytana St, Manila, Philippines"></div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h4>با ما تماس بگیرید</h4>
+                    <p>{{ setting.about_us }}</p>
+                    <ul class="contact-items">
+                        <li class="contact-item">
+                            <address>{{ setting.address }}</address>
+                        </li>
+                        <li class="contact-item"><a href="#">{{ setting.phone }}</a></li>
+                        <li class="contact-item"><a href="">{{ setting.email }}</a></li>
+                    </ul>
+
+                    <!-- Contact Form -->
+                    <form id="contact-form" class="contact-form mt-30 mb-30" method="post" action="">
+                    {% csrf_token %}
+                        <div class="contact-name">
+                            {{ contact_form.full_name }}
+                            {% for error in contact_form.full_name.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+
+                        </div>
+                        <div class="contact-email">
+                            {{contact_form.email}}
+                            {% for error in contact_form.email.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="contact-subject">
+                           {{ contact_form.subject }}
+                            {% for error in contact_form.subject.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="contact-message">
+                           {{ contact_form.text }}
+                            {% for error in contact_form.text.errors %}
+                                <p class="text-danger">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+
+                        <input type="submit" class="btn btn-lg btn-color btn-button" value="فرستادن"
+                               id="submit-message">
+                        <div id="msg" class="message"></div>
+                    </form>
+
+                </div>
+            </div>
+        </div> <!-- end post content -->
+    </div>
+
+{% endblock %}

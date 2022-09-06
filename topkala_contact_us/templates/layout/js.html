@@ -1,0 +1,53 @@
+{% load static %}
+
+<!-- jQuery Scripts -->
+<script src="{% static 'assets/js_contact/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js_contact/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js_contact/easing.min.js' %}"></script>
+<script src="{% static 'assets/js_contact/owl-carousel.min.js' %}"></script>
+<script src="{% static 'assets/js_contact/flickity.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/js_contact/twitterFetcher_min.js' %}"></script>
+<script src="{% static 'assets/js_contact/jquery.newsTicker.min.js' %}"></script>
+<script src="{% static 'assets/js_contact/modernizr.min.js' %}"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+<script type="text/javascript" src="{% static 'assets/js_contact/gmap3.min.js' %}"></script>
+<script src="{% static 'assets/js_contact/scripts.js' %}"></script>
+
+<!-- Google Map -->
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var gmapDiv = $("#google-map");
+        var gmapMarker = gmapDiv.attr("data-address");
+
+        gmapDiv.gmap3({
+            zoom: 16,
+            address: gmapMarker,
+            oomControl: true,
+            navigationControl: true,
+            scrollwheel: false,
+            styles: [{
+                "featureType": "all",
+                "elementType": "all",
+                "stylers": [{
+                    "saturation": "0"
+                }]
+            }]
+        })
+            .marker({
+                address: gmapMarker,
+                icon: "img/map_pin.png"
+            })
+            .infowindow({
+                content: "V Tytana St, Manila, Philippines"
+            })
+            .then(function (infowindow) {
+                var map = this.get(0);
+                var marker = this.get(1);
+                marker.addListener('click', function () {
+                    infowindow.open(map, marker);
+                });
+            });
+    });
+
+</script>

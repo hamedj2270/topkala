@@ -1,0 +1,12 @@
+<div class="box-header">دسته بندی ها</div>
+<div class="box-content category-result">
+         <ul>
+        <li><a href="/product">همه</a></li>
+    </ul>
+   {% for category in categories %}
+     <ul>
+        <li><a href="/product/{{ category.name }}">{{ category.title }}</a></li>
+    </ul>
+   {% endfor %}
+   
+</div>

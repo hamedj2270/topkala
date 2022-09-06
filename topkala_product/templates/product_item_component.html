@@ -1,0 +1,35 @@
+<li class="col-xl-3 col-lg-4 col-md-6 col-12 no-padding">
+
+    <div class="product-box">
+        <div class="product-seller-details product-seller-details-item-grid">
+                                                        <span class="product-main-seller"><span
+                                                                class="product-seller-details-label">فروشنده:
+                                                            </span>تاپ کالا</span>
+            <span class="product-seller-details-badge-container"></span>
+        </div>
+
+        <a class="product-box-img" href="{{ product.get_absolute_url }}">
+            <img src="{{ product.get_product_image }}" alt="">
+        </a>
+        <div class="product-box-content">
+            <div class="product-box-content-row">
+                <div class="product-box-title">
+                    <a href="{{ product.get_absolute_url }}">
+                        {{ product.title }}
+                    </a>
+                </div>
+            </div>
+            <div class="product-box-row product-box-row-price">
+                <div class="price">
+                    <div class="price-value">
+                        <div class="price-value-wrapper">
+                            {{ product.price }} <span class="price-currency">تومان</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</li>

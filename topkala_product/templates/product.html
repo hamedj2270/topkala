@@ -1,0 +1,75 @@
+{% extends 'base/_base.html' %}
+{% load static %}
+{% load render_partial %}
+{% block site_title %}
+    محصولات
+{% endblock %}
+
+{% block content %}
+    <main class="product-page default">
+        <div class="container">
+            <div class="row">
+                <aside class="sidebar-page col-12 col-sm-12 col-md-4 col-lg-3 order-1">
+                    <div class="box">
+                        {% render_partial 'product_category' %}
+                    </div>
+                </aside>
+                <div class="col-12 col-sm-12 col-md-8 col-lg-9 order-2">
+                    <div class="breadcrumb-section default">
+                        <ul class="breadcrumb-list">
+                            <li>
+                                <a href="#">
+                                    <span>فروشگاه اینترنتی تاپ کالا</span>
+                                </a>
+                            </li>
+                            <li><span>محصولات </span></li>
+                        </ul>
+                    </div>
+                    <div class="listing default">
+
+                        <div class="tab-content default text-center">
+                            <div class="tab-pane active" id="related" role="tabpanel" aria-expanded="true">
+                                <div class="container no-padding-right">
+                                    <ul class="row listing-items">
+                                        {% for product in page_obj %}
+                                            {% include 'product_item_component.html' with product=product %}
+                                        {% endfor %}
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <div class="pager default text-center">
+                            <ul class="pager-items">
+                                {% if page_obj.has_previous %}
+                                    <li><a href="?page={{ page_obj.previous_page_number }}">قبلی</a></li>
+                                {% endif %}
+
+                                {% for page in paginator.page_range %}
+                                    {% if page == page_obj.number %}
+                                        <li><a class="pager-item is-active" href="?page={{ page }}">{{ page }}</a></li>
+                                    {% else %}
+                                        <li><a href="?page={{ page }}">{{ page }}</a></li>
+                                    {% endif %}
+
+                                {% endfor %}
+
+                                {% if page_obj.has_next %}
+                                    <li><a href="?page={{ page_obj.next_page_number }}">بعدی</a></li>
+                                {% endif %}
+                                <line class="pager-items--partition"></line>
+                                <li>
+                                    <a class="pager-next"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+

@@ -1,0 +1,11 @@
+{% load static %}
+<div class="col-lg-6 col-md-5 col-sm-8 col-7">
+    <div class="search-area default">
+        <form action="/product/search" class="search">
+            <input type="text" id="gsearchsimple"
+                   placeholder="نام کالا، برند و یا دسته مورد نظر خود را جستجو کنید…" value="{{ request.GET.q }}" name="q">
+            <div class="localSearchSimple"></div>
+            <button type="submit"><img src="{% static 'assets/img/search.png' %}" alt=""></button>
+        </form>
+    </div>
+</div>
