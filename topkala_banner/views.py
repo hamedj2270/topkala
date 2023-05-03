@@ -8,7 +8,7 @@ def banner(request):
     context = {
         'baner': baner
     }
-    return render(request, 'home.html', context)
+    return render(request, 'banner.html', context)
 
 def aside_banner(request):
     asbanner = AsideBanner.objects.all()
