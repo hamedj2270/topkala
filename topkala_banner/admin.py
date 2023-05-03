@@ -11,13 +11,13 @@ class BannerAdmin(admin.ModelAdmin):
 
     class Meta:
         model = Banner
-# class BannerAside(admin.ModelAdmin):
-#     list_display = ['title', 'image', 'active']
+class BannerAside(admin.ModelAdmin):
+    list_display = ['title', 'image', 'active']
+    list_editable = ['active']
 
-
-#     class Meta:
-#         model = AsideBanner
+    class Meta:
+        model = AsideBanner
 
 
 admin.site.register(Banner, BannerAdmin)
-# admin.site.register(AsideBanner,BannerAside)
+admin.site.register(AsideBanner,BannerAside)
