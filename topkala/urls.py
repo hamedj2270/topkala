@@ -22,7 +22,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
-    path('', include('topkala_settings.urls')),
+#     path('', include('topkala_settings.urls')),
     path('', include('topkala_product.urls')),
     path('', include('topkala_order.urls')),
     path('', include('topkala_user.urls')),
