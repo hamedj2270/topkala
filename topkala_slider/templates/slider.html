@@ -1,0 +1,26 @@
+<section id="main-slider" class="carousel slide carousel-fade card" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+        <li data-target="#main-slider" data-slide-to="1"></li>
+        <li data-target="#main-slider" data-slide-to="2"></li>
+        <li data-target="#main-slider" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        {% for Slider in Sliders %}
+            <div class="carousel-item {{ forloop.first|yesno:"active," }}">
+                <a class="d-block" href="{{ Slider.link }}" target="_blank">
+                    <img src="{{ Slider.image.url }}"
+                         class="d-block w-100" alt="{{ Slider.title }}">
+                </a>
+            </div>
+
+        {% endfor %}
+
+    </div>
+    <a class="carousel-control-prev" href="#main-slider" role="button" data-slide="prev">
+        <i class="now-ui-icons arrows-1_minimal-right"></i>
+    </a>
+    <a class="carousel-control-next" href="#main-slider" data-slide="next">
+        <i class="now-ui-icons arrows-1_minimal-left"></i>
+    </a>
+</section>
