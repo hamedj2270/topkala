@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c46c920d-9532-4487-997a-dd6aca90b402" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2yNgSOtLhU2CpfjyQFX5a8MMos7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "last_opened_file_path": "C:/Users/hamed/Downloads/topkala-main/topkala-main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c46c920d-9532-4487-997a-dd6aca90b402" name="Changes" comment="" />
+      <created>1749680443964</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749680443964</updated>
+      <workItem from="1749680447085" duration="2584000" />
+      <workItem from="1749717321628" duration="3715000" />
+      <workItem from="1749725842565" duration="37894000" />
+      <workItem from="1749814814301" duration="4981000" />
+      <workItem from="1750104507262" duration="1188000" />
+      <workItem from="1750434222894" duration="5182000" />
+      <workItem from="1750886736388" duration="610000" />
+      <workItem from="1750930553636" duration="5350000" />
+      <workItem from="1751009882306" duration="5204000" />
+      <workItem from="1751102636494" duration="1223000" />
+      <workItem from="1751474884069" duration="1941000" />
+      <workItem from="1752242186831" duration="1210000" />
+      <workItem from="1752343053210" duration="3053000" />
+      <workItem from="1752517144396" duration="10998000" />
+      <workItem from="1752569444298" duration="8189000" />
+      <workItem from="1752598760008" duration="9112000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
